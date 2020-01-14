@@ -1,4 +1,4 @@
-// importing mongoose module
+const express = require('express')
 const mongoose = require('mongoose')
 // import schema 
 const Schema = mongoose.Schema;

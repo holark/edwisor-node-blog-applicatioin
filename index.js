@@ -2,10 +2,17 @@
 const express = require('express');
 const fs = require('fs')
 const appConfig = require('./config/appConfig')
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+const cookieParser = require('cookie-parser')
+const bodyParser = require('body-parser')
 
 // declaring an instance or creating an application instance
 const app = express()
+
+//middlewares
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cookieParser())
 
 // Bootstrap Models
 let modelsPath = './models';
