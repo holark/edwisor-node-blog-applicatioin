@@ -2,6 +2,8 @@ const express = require('express');
 const blogController = require('./../controllers/blogController')
 const appConfig = require('./../config/appConfig')
 
+
+
 let setRouter = (app) => {
 
     let baseUrl = appConfig.apiVersion + '/blogs';
